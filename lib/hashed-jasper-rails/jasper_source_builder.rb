@@ -2,7 +2,7 @@
 require "rexml/document"
 
 class JasperSourceBuilder
-  def initialize(data_source, model = "jasper", record = "record")
+  def initialize(data_source, model, record)
     @out_doc = REXML::Document.new()
     @out_doc.add(REXML::XMLDecl.new(version="1.0", encoding="UTF-8"))
     elem = REXML::Element.new(model)
@@ -25,10 +25,11 @@ class JasperSourceBuilder
   end
 end
 
-class ApplicationController
+class ActionController::Base
+  private
   def jasper_pdf(arg)
-    model_name = arg[:model]
-    record_name = arg[:record]
+    model_name = arg[:model] || "jasper"
+    record_name = arg[:record] || "record"
     if arg[:template].present?
       jasper_file = File.join("app/views",arg[:template])
       jasper_file += ".jasper" unless jasper_file =~ /.jasper$/
