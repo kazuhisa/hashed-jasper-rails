@@ -1,3 +1,6 @@
+# see.
+# https://github.com/fortesinformatica/jasper-rails
+
 require "jasper-rails/version"
 require "rails"
 require "rjb"
