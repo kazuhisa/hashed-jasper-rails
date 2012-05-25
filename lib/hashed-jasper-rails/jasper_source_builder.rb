@@ -30,7 +30,7 @@ class ActionController::Base
   def jasper_pdf(arg)
     model_name = arg[:model] || "jasper"
     record_name = arg[:record] || "record"
-    if arg[:template].present?
+    unless arg[:template].nil?
       jasper_file = File.join("app/views",arg[:template])
       jasper_file += ".jasper" unless jasper_file =~ /.jasper$/
     else
@@ -42,6 +42,6 @@ class ActionController::Base
       resource = arg[:resource]
     end
     options = arg[:options] || {}
-    send_data JasperRails::Jasper::Rails::render_pdf(jasper_file, resource, params, options), :type => Mime::PDF
+    send_data JasperRails::Jasper::Rails.render_pdf(jasper_file, resource, params, options), :type => Mime::PDF
   end
 end

@@ -13,3 +13,7 @@ group :development do
 end
 
 gem 'rjb', '>= 1.4.0'
+
+group :test do
+  gem 'rr', "~> 1.0.0"
+end

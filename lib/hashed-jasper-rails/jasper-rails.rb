@@ -1,10 +1,7 @@
 # see.
 # https://github.com/fortesinformatica/jasper-rails
 
-require "rails"
 require "rjb"
-
-# Mime::Type.register "application/pdf", :pdf
 
 module JasperRails
 
