@@ -1,19 +1,57 @@
 = hashed-jasper-rails
 
-Description goes here.
+Hashed-jasper-rails was inspired by jasper-rails.(https://github.com/fortesinformatica/jasper-rails)
+This can use hash as a data source.
 
-== Contributing to hashed-jasper-rails
+== How to use
  
-* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
-* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
-* Fork the project.
-* Start a feature/bugfix branch.
-* Commit and push until you are happy with your contribution.
-* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
-* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+(1) Add your Gemfile.
+  gem "hashed-jasper-rails"
+
+(2) Add action method.
+  # app/controllers/users_controller.rb
+
+  def print
+    users = [
+        {:name => "Izumi Konata", :email => "konata@example.com"},
+        {:name => "Hiiragi Tsukasa", :email => "tsukasa@example.com"},
+        {:name => "Hiiragi Kagami", :email => "kagami@example.com"}
+    ]
+    jasper_pdf :resource => users
+  end
+
+(3) Edit a jasper template file.
+  Template propaties.
+  Query Text: /jasper/record 
+  The language for the dataset query: xPath
+  
+  for Japanese.
+    Text Field propaties.
+    Pdf Font: HeiseiMin-W3 or HeiseiKakuGo-W5
+    Pdf Encoding: UniJIS-UCS2-H (Japanese)
+
+(4) Set a jasper template file.
+  # app/views/users/print.jaster
+
+== Options.
+
+(1) Set a model and record name.
+  jasper_pdf :resource => users, :model => "foo", :record => "baa"
+
+  Then template propaties.
+    Query Text: /foo/baa
+
+(2) Set a template file.
+  jasper_pdf :resource => users, :template => "list"
+
+  Then use this template file.
+  # app/views/users/list.jaster
+
+(3) Use ActiveRecord resource.
+  user = User.all
+  jasper_pdf :resource => users
 
 == Copyright
 
 Copyright (c) 2012 Kazuhisa Yamamoto. See LICENSE.txt for
 further details.
-
