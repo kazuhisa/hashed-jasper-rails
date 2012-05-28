@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Kazuhisa Yamamoto"]
-  s.date = "2012-05-23"
+  s.date = "2012-05-28"
   s.description = "Generate pdf reports on Rails using Jasper Reports reporting tool"
   s.email = "ak.hisashi@gmail.com"
   s.extra_rdoc_files = [
@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "hashed-jasper-rails.gemspec",
     "lib/hashed-jasper-rails.rb",
     "lib/hashed-jasper-rails/jasper-rails.rb",
     "lib/hashed-jasper-rails/jasper_source_builder.rb",
@@ -39,6 +40,7 @@ Gem::Specification.new do |s|
     "lib/java/jcommon-1.0.15.jar",
     "lib/java/jfreechart-1.0.12.jar",
     "lib/java/xalan.jar",
+    "spec/fake_app.rb",
     "spec/hashed-jasper-rails_spec.rb",
     "spec/spec_helper.rb"
   ]
