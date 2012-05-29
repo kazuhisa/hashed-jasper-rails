@@ -42,7 +42,7 @@ This can use hash as a data source.
     Query Text: /foo/baa
 
 (2) Set a template file.
-  jasper_pdf :resource => users, :template => "list"
+  jasper_pdf :resource => users, :template => "users/list"
 
   Then use this template file.
   # app/views/users/list.jaster
