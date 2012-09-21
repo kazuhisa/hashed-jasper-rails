@@ -31,7 +31,7 @@ This can use hash as a data source.
     Pdf Encoding: UniJIS-UCS2-H (Japanese)
 
 (4) Set a jasper template file.
-  # app/views/users/print.jaster
+  # app/views/users/print.jasper
 
 == Options.
 
