@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
 
-require 'hashed-jasper-rails/jasper-rails'
+require 'rubygems'
+require 'jasper-rails'
 require 'hashed-jasper-rails/jasper_source_builder'
