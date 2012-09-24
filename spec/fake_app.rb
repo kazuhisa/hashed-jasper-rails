@@ -3,7 +3,3 @@ class ActionController
     # dummy
   end
 end
-
-class Mime
-  PDF = "application/pdf"
-end
