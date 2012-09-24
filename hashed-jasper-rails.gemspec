@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "hashed-jasper-rails"
-  s.version = "0.1.0"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Kazuhisa Yamamoto"]
-  s.date = "2012-05-28"
+  s.date = "2012-09-24"
   s.description = "Generate pdf reports on Rails using Jasper Reports reporting tool"
   s.email = "ak.hisashi@gmail.com"
   s.extra_rdoc_files = [
@@ -27,19 +27,7 @@ Gem::Specification.new do |s|
     "VERSION",
     "hashed-jasper-rails.gemspec",
     "lib/hashed-jasper-rails.rb",
-    "lib/hashed-jasper-rails/jasper-rails.rb",
     "lib/hashed-jasper-rails/jasper_source_builder.rb",
-    "lib/java/commons-beanutils-1.8.2.jar",
-    "lib/java/commons-collections-3.2.1.jar",
-    "lib/java/commons-digester-2.1.jar",
-    "lib/java/commons-logging-1.1.jar",
-    "lib/java/groovy-all-1.7.5.jar",
-    "lib/java/iText-2.1.7.jar",
-    "lib/java/iTextAsian.jar",
-    "lib/java/jasperreports-4.5.1.jar",
-    "lib/java/jcommon-1.0.15.jar",
-    "lib/java/jfreechart-1.0.12.jar",
-    "lib/java/xalan.jar",
     "spec/fake_app.rb",
     "spec/hashed-jasper-rails_spec.rb",
     "spec/spec_helper.rb"
@@ -47,31 +35,31 @@ Gem::Specification.new do |s|
   s.homepage = "http://github.com/kazuhisa/hashed-jasper-rails"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = "1.8.15"
+  s.rubygems_version = "1.8.24"
   s.summary = "Report tool"
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<rjb>, [">= 1.4.0"])
+      s.add_runtime_dependency(%q<jasper-rails>, [">= 0"])
       s.add_development_dependency(%q<rspec>, ["~> 2.8.0"])
       s.add_development_dependency(%q<rdoc>, ["~> 3.12"])
-      s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.8.3"])
+      s.add_development_dependency(%q<rails>, [">= 0"])
     else
-      s.add_dependency(%q<rjb>, [">= 1.4.0"])
+      s.add_dependency(%q<jasper-rails>, [">= 0"])
       s.add_dependency(%q<rspec>, ["~> 2.8.0"])
       s.add_dependency(%q<rdoc>, ["~> 3.12"])
-      s.add_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_dependency(%q<jeweler>, ["~> 1.8.3"])
+      s.add_dependency(%q<rails>, [">= 0"])
     end
   else
-    s.add_dependency(%q<rjb>, [">= 1.4.0"])
+    s.add_dependency(%q<jasper-rails>, [">= 0"])
     s.add_dependency(%q<rspec>, ["~> 2.8.0"])
     s.add_dependency(%q<rdoc>, ["~> 3.12"])
-    s.add_dependency(%q<bundler>, ["~> 1.0.0"])
     s.add_dependency(%q<jeweler>, ["~> 1.8.3"])
+    s.add_dependency(%q<rails>, [">= 0"])
   end
 end
 
