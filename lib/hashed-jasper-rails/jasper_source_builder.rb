@@ -41,8 +41,8 @@ class ActionController::Base
     else
       resource = arg[:resource]
     end
-	params = arg[:params] || {}
+	jasper_params = arg[:params] || {}
     options = arg[:options] || {}
-    send_data JasperRails::Jasper::Rails.render_pdf(jasper_file, resource, params, options), :type => Mime::PDF
+    send_data JasperRails::Jasper::Rails.render_pdf(jasper_file, resource, jasper_params, options), :type => Mime::PDF
   end
 end
