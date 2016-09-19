@@ -24,6 +24,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rspec', '~> 2.13'
   s.add_development_dependency 'rspec-rails'
   s.add_dependency 'rails', '>= 3.0.7'
-  s.add_dependency 'jasper-rails', '>= 1.0.3'
+  s.add_dependency 'jasper-rails', '2.0.0.beta2'
 end
 
